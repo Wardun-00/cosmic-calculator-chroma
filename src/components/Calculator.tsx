@@ -1,12 +1,14 @@
-import React from 'react';
-import useCalculator from '../hooks/useCalculator';
+
+import React, { useState } from 'react';
+import { useCalculator } from '../hooks/useCalculator';
 import CalculatorDisplay from './CalculatorDisplay';
 import CalculatorButton from './CalculatorButton';
 import ThemeSelector from './ThemeSelector';
+import { cn } from '@/lib/utils';
 import { 
   Calculator as CalculatorIcon, 
-  Plus, 
-  Minus, 
+  Plus,
+  Minus,
   X as MultiplyIcon, 
   Divide, 
   PlusSquare, 
@@ -14,13 +16,11 @@ import {
   Square, 
   RotateCcw, 
   Power, 
-  Hash, 
-  Minus, 
-  Plus, 
+  Hash,
   Equal,
-  CircleSquare, 
   RefreshCw,
-  Percent 
+  Percent,
+  Trash2
 } from 'lucide-react';
 
 const Calculator: React.FC = () => {
@@ -87,7 +87,7 @@ const Calculator: React.FC = () => {
             type="function" 
           />
           <CalculatorButton 
-            label={<Delete size={18} />} 
+            label={<Trash2 size={18} />} 
             onClick={actions.handleBackspace} 
             type="function" 
           />
