@@ -1,11 +1,12 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 220 20% 97%;
+    --foreground: 220 20% 10%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -13,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 220 55% 40%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -34,60 +35,89 @@
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Calculator theme - Dark (default) */
+    --calc-display: 220 20% 10%;
+    --calc-display-text: 210 40% 98%;
+    --calc-body: 220 20% 15%;
+    --calc-button: 220 20% 25%;
+    --calc-button-text: 210 40% 98%;
+    --calc-function-button: 220 15% 20%;
+    --calc-function-button-text: 210 40% 93%;
+    --calc-operator-button: 25 95% 53%;
+    --calc-operator-button-text: 210 40% 98%;
+    --calc-equal-button: 25 95% 53%;
+    --calc-equal-button-text: 210 40% 98%;
   }
+}
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+.theme-dark {
+  --calc-display: 220 20% 10%;
+  --calc-display-text: 210 40% 98%;
+  --calc-body: 220 20% 15%;
+  --calc-button: 220 20% 25%;
+  --calc-button-text: 210 40% 98%;
+  --calc-function-button: 220 15% 20%;
+  --calc-function-button-text: 210 40% 93%;
+  --calc-operator-button: 25 95% 53%;
+  --calc-operator-button-text: 210 40% 98%;
+  --calc-equal-button: 25 95% 53%;
+  --calc-equal-button-text: 210 40% 98%;
+}
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+.theme-blue {
+  --calc-display: 220 60% 15%;
+  --calc-display-text: 210 40% 98%;
+  --calc-body: 220 60% 20%;
+  --calc-button: 220 50% 30%;
+  --calc-button-text: 210 40% 98%;
+  --calc-function-button: 220 45% 25%;
+  --calc-function-button-text: 210 40% 93%;
+  --calc-operator-button: 200 95% 50%;
+  --calc-operator-button-text: 210 40% 98%;
+  --calc-equal-button: 200 95% 50%;
+  --calc-equal-button-text: 210 40% 98%;
+}
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+.theme-purple {
+  --calc-display: 270 50% 15%;
+  --calc-display-text: 210 40% 98%;
+  --calc-body: 270 50% 20%;
+  --calc-button: 270 40% 30%;
+  --calc-button-text: 210 40% 98%;
+  --calc-function-button: 270 35% 25%;
+  --calc-function-button-text: 210 40% 93%;
+  --calc-operator-button: 280 90% 50%;
+  --calc-operator-button-text: 210 40% 98%;
+  --calc-equal-button: 280 90% 50%;
+  --calc-equal-button-text: 210 40% 98%;
+}
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+.theme-green {
+  --calc-display: 160 50% 10%;
+  --calc-display-text: 210 40% 98%;
+  --calc-body: 160 50% 15%;
+  --calc-button: 160 40% 25%;
+  --calc-button-text: 210 40% 98%;
+  --calc-function-button: 160 35% 20%;
+  --calc-function-button-text: 210 40% 93%;
+  --calc-operator-button: 150 70% 40%;
+  --calc-operator-button-text: 210 40% 98%;
+  --calc-equal-button: 150 70% 40%;
+  --calc-equal-button-text: 210 40% 98%;
+}
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
+.theme-red {
+  --calc-display: 0 50% 15%;
+  --calc-display-text: 210 40% 98%;
+  --calc-body: 0 50% 20%;
+  --calc-button: 0 40% 30%;
+  --calc-button-text: 210 40% 98%;
+  --calc-function-button: 0 35% 25%;
+  --calc-function-button-text: 210 40% 93%;
+  --calc-operator-button: 0 80% 50%;
+  --calc-operator-button-text: 210 40% 98%;
+  --calc-equal-button: 0 80% 50%;
+  --calc-equal-button-text: 210 40% 98%;
 }
 
 @layer base {
@@ -96,6 +126,36 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
   }
+}
+
+.calculator-glass {
+  @apply bg-calc-body/90 backdrop-blur-md border border-white/10 shadow-glass;
+}
+
+.calculator-screen {
+  @apply bg-calc-display/95 backdrop-blur-md border border-white/5 shadow-neo-inner;
+}
+
+.calculator-button {
+  @apply transition-all duration-200 bg-calc-button text-calc-button-text rounded-lg 
+         shadow-neo hover:brightness-110 active:shadow-neo-inner active:brightness-90
+         active:transform active:scale-95;
+}
+
+.function-button {
+  @apply bg-calc-function-button text-calc-function-button-text;
+}
+
+.operator-button {
+  @apply bg-calc-operator-button text-calc-operator-button-text;
+}
+
+.equal-button {
+  @apply bg-calc-equal-button text-calc-equal-button-text;
+}
+
+.calculator-display {
+  font-variant-numeric: tabular-nums;
 }
