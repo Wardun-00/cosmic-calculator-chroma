@@ -14,7 +14,7 @@ import {
   Minus, 
   Plus, 
   Equal,
-  SquareRoot,
+  Function, // Replacing SquareRoot with Function icon
   RefreshCw,
   Percent 
 } from 'lucide-react';
@@ -176,7 +176,7 @@ const Calculator: React.FC = () => {
             type="function" 
           />
           <CalculatorButton 
-            label={<SquareRoot size={18} />} 
+            label="√x" 
             onClick={() => actions.handleFunction('sqrt')} 
             type="function" 
           />
