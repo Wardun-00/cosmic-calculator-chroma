@@ -1,6 +1,8 @@
 
 import React from 'react';
 import Calculator from '@/components/Calculator';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   return (
@@ -9,6 +11,11 @@ const Index = () => {
         <Calculator />
         <div className="text-center mt-8 text-white/60 text-sm">
           <p>Premium scientific calculator experience</p>
+          <div className="mt-4">
+            <Button asChild variant="outline" className="text-white border-white/20 hover:bg-white/10">
+              <Link to="/portfolio">View My Portfolio</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </div>

@@ -1,20 +1,24 @@
-
-import React, { useState } from 'react';
-import { cn } from '@/lib/utils';
-import CalculatorButton from './CalculatorButton';
+import React from 'react';
+import useCalculator from '../hooks/useCalculator';
 import CalculatorDisplay from './CalculatorDisplay';
+import CalculatorButton from './CalculatorButton';
 import ThemeSelector from './ThemeSelector';
-import { useCalculator } from '@/hooks/useCalculator';
 import { 
   Calculator as CalculatorIcon, 
-  Power, 
-  Delete, 
+  Plus, 
+  Minus, 
+  X as MultiplyIcon, 
   Divide, 
-  X as Multiply, 
+  PlusSquare, 
+  MinusSquare, 
+  Square, 
+  RotateCcw, 
+  Power, 
+  Hash, 
   Minus, 
   Plus, 
   Equal,
-  Function, // Replacing SquareRoot with Function icon
+  CircleSquare, 
   RefreshCw,
   Percent 
 } from 'lucide-react';
@@ -107,7 +111,7 @@ const Calculator: React.FC = () => {
             onClick={() => actions.appendDigit('9')} 
           />
           <CalculatorButton 
-            label={<Multiply size={18} />} 
+            label={<MultiplyIcon size={18} />} 
             onClick={() => actions.handleOperator('×')} 
             type="operator" 
           />
